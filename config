@@ -157,3 +157,5 @@ bar {
 }
 
 bindsym $mod+t exec i3lock --color=101a4a -e
+bindsym $mod+Shift+m move scratchpad
+bindsym $mod+m scratchpad show
