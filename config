@@ -147,8 +147,20 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
 bindsym $mod+r mode "resize"
+
+mode "launcher" {
+	bindsym f exec firefox
+	bindsym c exec google-chrome
+	bindsym s exec slack
+	bindsym v exec vscode
+	bindsym p exec /opt/cisco/anyconnect/bin/vpnui
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+semicolon mode "launcher"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -159,3 +171,13 @@ bar {
 bindsym $mod+t exec i3lock --color=101a4a -e
 bindsym $mod+Shift+m move scratchpad
 bindsym $mod+m scratchpad show
+
+# Screenshots
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
