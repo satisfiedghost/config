@@ -155,6 +155,7 @@ mode "launcher" {
 	bindsym s exec slack
 	bindsym v exec vscode
 	bindsym p exec /opt/cisco/anyconnect/bin/vpnui
+	bindsym b exec flameshot gui
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
