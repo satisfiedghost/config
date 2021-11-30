@@ -8,6 +8,8 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
+#
+# TEST TEST TEST
 
 set $mod Mod4
 
@@ -157,6 +159,7 @@ mode "launcher" {
 	bindsym p exec /opt/cisco/anyconnect/bin/vpnui
 	bindsym b exec flameshot gui
 	bindsym o exec spotify
+	bindsym t exec typora
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
