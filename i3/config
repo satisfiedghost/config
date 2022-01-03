@@ -159,10 +159,11 @@ mode "launcher" {
 	bindsym o exec spotify
 	bindsym t exec typora
 	bindsym n exec nautilus
+  bindsym e exec gedit
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 bindsym $mod+semicolon mode "launcher"
 
@@ -185,3 +186,6 @@ bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(d
 bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
 bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
+# Caps lock is evil
+exec --no-startup-id setxkbmap -option caps:none
