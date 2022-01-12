@@ -160,6 +160,8 @@ mode "launcher" {
 	bindsym t exec typora
 	bindsym n exec nautilus
   bindsym e exec gedit
+  bindsym Shift+t exec Telegram
+  bindsym Shift+s exec steam
 
   # back to normal: Enter or Escape
   bindsym Return mode "default"
