@@ -1,0 +1,12 @@
+{
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active",
+    "workbench.colorTheme": "Nord Wave",
+    "workbench.sideBar.location": "right",
+    "editor.tabSize": 2,
+    "window.zoomLevel": 0,
+    "files.associations": {
+        "*.tpp": "cpp"
+    },
+    "editor.fontSize": 13
+}
